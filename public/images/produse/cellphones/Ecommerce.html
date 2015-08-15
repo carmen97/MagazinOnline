@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<!-- saved from url=(0031)http://localhost:3000/#/produse -->
+<html ng-app="myApp" class="ng-scope"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;}</style>
+  <meta charset="UTF-8">
+  <title>Ecommerce</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="./Ecommerce_files/angular.min.js"></script>  
+  <script src="./Ecommerce_files/angular-route.min.js"></script>
+  <script src="./Ecommerce_files/app.js"></script>
+  <link rel="stylesheet" href="http://localhost:3000/bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="http://localhost:3000/css/style.css">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <link href="./Ecommerce_files/star-rating.css" media="all" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+ <!-- ngInclude: 'partials/nav.html' --><div ng-include="&#39;partials/nav.html&#39;" class="ng-scope">  <nav class="navbar navbar-default navbar-static-top ng-scope" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapse" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+              </button>
+                <a class="navbar-brand ng-binding" href="http://localhost:3000/#/home">Commerce S.R.L</a>
+            </div> 
+            <div class="collapse navbar-collapse" id="collapse">
+                <ul class="nav navbar-nav navbar-right">
+                <li><a ng-href="#/home" href="http://localhost:3000/#/home">Acasa</a></li>
+                <li><a ng-href="#/produse" href="./Ecommerce_files/Ecommerce.html">Produse</a></li>
+
+                </ul>
+            </div>
+            
+        </div>
+    
+  </nav></div>
+ 
+ <!-- ngView:  --><div ng-view="" class="ng-scope"><section ng-controller="ListController" class="ng-scope">
+    <div class="container">
+        <div class="page-header"><h2>Produse</h2></div>
+            <div class="row" style="padding-left: 15px; padding-right: 15px;">
+                <div class="col-md-4">
+                   <h3>Cauta produs</h3>
+                   <div>
+                        <input type="text" class="form-control ng-pristine ng-untouched ng-valid" placeholder="Nume,descriere sau pret" ng-model="query">
+                   </div>
+                  
+                </div>
+                <div class="col-md-4">
+                    <h3>Categorii</h3>
+                            <div>
+                                   
+                                          <select class="form-control ng-pristine ng-untouched ng-valid" ng-model="categorie"><option value="? undefined:undefined ?"></option>
+                                                 <option value="name">Name</option>
+                                                 <option value="reknown">Reknown</option>
+
+
+                                          </select>
+                                   
+                            </div>
+
+                </div>
+                <div class="col-md-4">
+                   <div>
+                         <h3>Dupa pret:</h3> 
+                                <div>
+                                         <label>
+                                         <input type="radio" ng-model="direction" name="direction" value="reverse" checked="" class="ng-pristine ng-untouched ng-valid">
+                                              ascending
+                                             </label>
+                                            <label class="formgroup">
+                                              <input type="radio" ng-model="direction" name="direction" class="ng-pristine ng-untouched ng-valid">
+                                                                                  descrescator
+                                        </label>
+                                </div>
+   
+
+                          
+                   </div>
+                </div>
+            </div>
+              <br>
+              
+               <div style="" class="container">
+                      <div class="row">
+                     <!-- ngRepeat: item in produse.cellphones |filter : query|orderBy: categorie: direction --><div class="col-xs-12 col-sm-6 col-md-3 ng-scope" ng-repeat="item in produse.cellphones |filter : query|orderBy: categorie: direction ">
+                       
+                        <div class="thumbnail">
+                            
+                             <img itemprop="image" ng-src="../images/produse/cellphones/galaxys5.jpg" alt="Telefon mobil Samsung Galaxy S5 4G, 16GB, Black" border="0" width="350" height="350" class="poza_produs" style="display: block;" src="./Ecommerce_files/galaxys5.jpg">
+                            <div class="caption">
+                        <h3 style="text-align:center; margin-top: 20px;margin-bottom: 10px;" class="ng-binding">Samsung Galaxy S5</h3>
+                        
+ <div class="form-group text-center">
+                        <button class="btn btn-default">More Info</button>
+                        <button class="btn btn-danger">Buy</button>
+                    </div>
+                    </div>
+                            
+                              
+                                    <!-- ngRepeat: i in getNumber(item.stars) track by $index --><i ng-repeat="i in getNumber(item.stars) track by $index" style="color:#D7D700;" class="fa fa-star fa-2x ng-scope"></i><!-- end ngRepeat: i in getNumber(item.stars) track by $index --><i ng-repeat="i in getNumber(item.stars) track by $index" style="color:#D7D700;" class="fa fa-star fa-2x ng-scope"></i><!-- end ngRepeat: i in getNumber(item.stars) track by $index --><i ng-repeat="i in getNumber(item.stars) track by $index" style="color:#D7D700;" class="fa fa-star fa-2x ng-scope"></i><!-- end ngRepeat: i in getNumber(item.stars) track by $index --><i ng-repeat="i in getNumber(item.stars) track by $index" style="color:#D7D700;" class="fa fa-star fa-2x ng-scope"></i><!-- end ngRepeat: i in getNumber(item.stars) track by $index -->
+                                    
+                                   
+                               
+                        </div>
+                        
+                     </div><!-- end ngRepeat: item in produse.cellphones |filter : query|orderBy: categorie: direction --><div class="col-xs-12 col-sm-6 col-md-3 ng-scope" ng-repeat="item in produse.cellphones |filter : query|orderBy: categorie: direction ">
+                       
+                        <div class="thumbnail">
+                            
+                             <img itemprop="image" ng-src="../images/produse/cellphones/samsungG850.jpg" alt="Telefon mobil Samsung Galaxy S5 4G, 16GB, Black" border="0" width="350" height="350" class="poza_produs" style="display: block;" src="./Ecommerce_files/samsungG850.jpg">
+                            <div class="caption">
+                        <h3 style="text-align:center; margin-top: 20px;margin-bottom: 10px;" class="ng-binding">Samsung G850</h3>
+                        
+ <div class="form-group text-center">
+                        <button class="btn btn-default">More Info</button>
+                        <button class="btn btn-danger">Buy</button>
+                    </div>
+                    </div>
+                            
+                              
+                                    <!-- ngRepeat: i in getNumber(item.stars) track by $index --><i ng-repeat="i in getNumber(item.stars) track by $index" style="color:#D7D700;" class="fa fa-star fa-2x ng-scope"></i><!-- end ngRepeat: i in getNumber(item.stars) track by $index --><i ng-repeat="i in getNumber(item.stars) track by $index" style="color:#D7D700;" class="fa fa-star fa-2x ng-scope"></i><!-- end ngRepeat: i in getNumber(item.stars) track by $index --><i ng-repeat="i in getNumber(item.stars) track by $index" style="color:#D7D700;" class="fa fa-star fa-2x ng-scope"></i><!-- end ngRepeat: i in getNumber(item.stars) track by $index --><i ng-repeat="i in getNumber(item.stars) track by $index" style="color:#D7D700;" class="fa fa-star fa-2x ng-scope"></i><!-- end ngRepeat: i in getNumber(item.stars) track by $index --><i ng-repeat="i in getNumber(item.stars) track by $index" style="color:#D7D700;" class="fa fa-star fa-2x ng-scope"></i><!-- end ngRepeat: i in getNumber(item.stars) track by $index -->
+                                    
+                                   
+                               
+                        </div>
+                        
+                     </div><!-- end ngRepeat: item in produse.cellphones |filter : query|orderBy: categorie: direction --><div class="col-xs-12 col-sm-6 col-md-3 ng-scope" ng-repeat="item in produse.cellphones |filter : query|orderBy: categorie: direction ">
+                       
+                        <div class="thumbnail">
+                            
+                             <img itemprop="image" ng-src="../images/produse/cellphones/nokia_luminia_630.jpg" alt="Telefon mobil Samsung Galaxy S5 4G, 16GB, Black" border="0" width="350" height="350" class="poza_produs" style="display: block;" src="./Ecommerce_files/nokia_luminia_630.jpg">
+                            <div class="caption">
+                        <h3 style="text-align:center; margin-top: 20px;margin-bottom: 10px;" class="ng-binding">Nokia 630 Lumia</h3>
+                        
+ <div class="form-group text-center">
+                        <button class="btn btn-default">More Info</button>
+                        <button class="btn btn-danger">Buy</button>
+                    </div>
+                    </div>
+                            
+                              
+                                    <!-- ngRepeat: i in getNumber(item.stars) track by $index --><i ng-repeat="i in getNumber(item.stars) track by $index" style="color:#D7D700;" class="fa fa-star fa-2x ng-scope"></i><!-- end ngRepeat: i in getNumber(item.stars) track by $index --><i ng-repeat="i in getNumber(item.stars) track by $index" style="color:#D7D700;" class="fa fa-star fa-2x ng-scope"></i><!-- end ngRepeat: i in getNumber(item.stars) track by $index -->
+                                    
+                                   
+                               
+                        </div>
+                        
+                     </div><!-- end ngRepeat: item in produse.cellphones |filter : query|orderBy: categorie: direction -->
+                      
+                </div>
+               </div>
+             
+                   
+
+               
+            
+    </div>
+    
+</section></div>
+
+
+
+
+</body></html>

@@ -1,0 +1,51 @@
+<section ng-controller="PanouController">
+   <br>
+   
+    <div class="container">
+        <div class="page-header">
+            <h2>Panou de control</h2>
+        </div>
+       <div class="panel panel-primary">
+        <div class="panel-heading">
+            <h2>Adauga produs</h2>
+        </div>
+        <div class="panel-body">
+            <form role="form"  name="myform"
+              ng-submit="addProduct()"
+              novalidate>
+                <div class="form-group">
+                    <label>Model :</label>
+                    <input type="text" class="form-control" id="email" ng-model="model_produs" ng-required="true">
+                </div>
+                <div class="form-group">
+                    <label>Pret:</label>
+                    <input type="number" class="form-control" ng-model="pret" ng-required="true">
+                </div>
+                <div class="form-group">
+                    <label>Categorie:</label>
+                    <select class="form-control" ng-model="category" ng-required="true">
+                        <option value="cellphones">Telefoane</option>
+                        <option value="laptops">Laptopuri</option>
+
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Rating:</label>
+                    <input type="number" class="form-control" ng-model="rating" ng-required="true">
+                </div>
+
+                <button  type="submit" class="btn btn-lg btn-success">Submit</button>
+            </form>
+        </div>
+
+    </div>
+
+
+<!-- ng-disabled="myform.$invalid"-->
+
+
+
+
+    </div>
+
+</section>

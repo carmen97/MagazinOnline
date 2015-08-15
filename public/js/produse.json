@@ -1,0 +1,103 @@
+{
+      "cellphones": [
+          {
+             "brand" : "samsung",
+             "pret" : 300,
+             "model" :"Samsung Galaxy S5",
+             "nocontract":"300",
+             "imagine":"galaxys5",
+             "imagine_alb":"galaxys5alb",
+             "imagine_negru":"galaxys5negru",
+             "stars" :4
+            
+            
+          },
+          {
+             "brand" : "samsung",
+             "pret" : 800,
+              
+             "model" :"Samsung G850",
+             "nocontract":"300",
+             "imagine":"samsungG850",
+             "imagine_alb":"galaxys5alb",
+             "imagine_negru":"galaxys5negru",
+             "stars" :5
+           
+            
+            
+          },
+           {
+             "brand" : "nokia",
+             "pret" : 500,
+             "model" :"Nokia 630 Lumia",
+             "nocontract":"300",
+             "imagine":"nokia_luminia_630",
+             "imagine_alb":"galaxys5alb",
+             "imagine_negru":"galaxys5negru",
+             "stars" :2
+             
+          
+          },{
+              "brand" : "iphone",
+             "pret" : 500,
+             "model" :"iPhone6 16GB",
+             "nocontract":"300",
+             "imagine":"iphone6_16gb",
+             "imagine_alb":"galaxys5alb",
+             "imagine_negru":"galaxys5negru",
+             "stars" :5
+             
+          }
+          
+         
+        ],
+    "laptops": [
+          {
+             "brand" : "samsung",
+             "pret" : 1350,
+             "model" :"HP 355 G2",
+             "nocontract":"300",
+             "imagine":"hp355_g2",
+             "imagine_alb":"galaxys5alb",
+             "imagine_negru":"galaxys5negru",
+             "stars" :5
+            
+            
+          },
+          {
+            "brand" : "lenovo",
+             "pret" : 1700,
+             "model" :"Lenovo IdeaPad G50",
+             "nocontract":"300",
+             "imagine":"lenovo_g50",
+             "imagine_alb":"galaxys5alb",
+             "imagine_negru":"galaxys5negru",
+             "stars" :4
+            
+          },{
+              "brand" : "asus",
+             "pret" : 2350,
+             "model" :"Asus X553MA",
+             "nocontract":"300",
+             "imagine":"asus_X553MA",
+             "imagine_alb":"galaxys5alb",
+             "imagine_negru":"galaxys5negru",
+             "stars" :6
+             
+          },{
+             "brand" : "dell",
+             "pret" : 3000,
+             "model" :"Dell Inspiron 3551",
+             "nocontract":"300",
+             "imagine":"dell_inspiron_3551",
+             "imagine_alb":"galaxys5alb",
+             "imagine_negru":"galaxys5negru",
+             "stars" :3
+              
+          }
+          
+         
+        ]
+     
+}
+  

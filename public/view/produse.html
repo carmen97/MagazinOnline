@@ -1,0 +1,118 @@
+<section ng-controller="ListController">
+   <br>
+    <div class="container">
+        <div class="page-header">
+            <h2>Produse</h2>
+        </div>
+        <div class="row" style="padding-left: 15px; padding-right: 15px;">
+            <div class="col-md-4">
+                <h3>Cauta produs</h3>
+                <div>
+                    <input class="form-control" ng-model="query" placeholder="Nume,descriere sau pret" autofocus>
+
+                </div>
+
+            </div>
+            <div class="col-md-4">
+                <h3>Categorii</h3>
+                <div>
+
+
+                    <select class="form-control" ng-model="category">
+                        <option value="cellphones">Telefoane</option>
+                        <option value="laptops">Laptopuri</option>
+
+
+                    </select>
+
+
+                </div>
+
+            </div>
+
+            <div class="col-md-4">
+                <div>
+                    <h3>Dupa pret:</h3> 
+                    <div>
+                        <label>
+                            <input type="radio" ng-model="direction" value="+pret" name="direction" checked>ascendent
+                        </label>
+                        <label class="formgroup">
+                            <input type="radio" ng-model="direction" name="direction" value="-pret">descendent
+                        </label>
+                    </div>
+
+
+
+                </div>
+            </div>
+        </div>
+        <br>
+       
+       
+        <div style="" class="container">
+
+            <div class="row">
+                <div class="col-xs-12 col-sm-6 col-md-3" ng-repeat="(key,item) in produse |filter:{categorie: category}|filter:query|orderBy:direction ">
+
+                    <div class="thumbnail">
+
+                        <img itemprop="image" ng-src="../images/produse/{{item.categorie}}/{{item.imagine}}.jpg"  border="0" width="350" height="350" class="poza_produs" style="display: block;">
+                        <div class="caption">
+                            <h3 style="text-align:center; margin-top: 20px;margin-bottom: 10px;">{{item.model}}</h3>
+                            <div>Price : <span> {{item.pret}}</span>
+                            </div>
+                            <div class="form-group text-center">
+                                <button class="btn btn-default">More Info</button>
+                                <button class="btn btn-primary">Buy</button>
+                                <button class="btn btn-danger" ng-click="deleteItem(item.id)">Delete</button>
+                            </div>
+                            <i ng-repeat="i in getNumber(item.stars) track by $index" style="color:#D7D700;" class="fa fa-star fa-2x"></i>
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+<!--
+        <div id="myModal" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+
+              
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Stergere date</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>Datele se vor pierde!!</p>
+                        {{idItem}}
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" ng-click="deleteItem(idItem)">Delete</button>
+
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        -->
+        <!--
+               <div ng-repeat="(key,item) in produse">
+                   {{item.model}} ng-click="deleteMeeting(key)"<!--ng-click="deleteItem(key)"
+                   <button class="btn btn-danger" ng-click="deleteMeeting(key)">Delete</button>
+               </div>
+               -->
+
+
+
+
+
+
+    </div>
+
+</section>
