@@ -1,2 +1,2 @@
-# MagazinOnline
-Magazin Online de Componente IT
+# E-commerce website
+E-commerce IT components website
